@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang='en'>
+<!--Programmer: Hunter Brust
+    Date: 10/10/18
+    Project: Try 3 of Game Mechanic-->
+
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,900" rel="stylesheet">
+    <!--Shortcut Icon(Tab Icon)-->
+    <link rel="shortcut icon" href="pics/favicon.png" />
+
+    <!-- Title Goes Here -->
+    <title>MASTERMIND</title>
+</head>
+
+<body>
+    <header>
+        <h1>MASTERMIND</h1>
+        <p>The Challenging Game of Logic and Deduction</p>
+    </header>
+    <main id="colorpicker">
+        <header id="colorpickerheader">
+            Color Pallete
+        </header>
+        <div class="resizebar" id="rs1"></div>
+
+        <div id="colorarea">
+            <div id="red" class="colors" style="background-color:red;" draggable="true" ondragstart="drag(event)" onclick="select(event)"></div>
+            <div id="blue" class="colors" style="background-color:blue;" draggable="true" ondragstart="drag(event)" onclick="select(event)"></div>
+            <div id="green" class="colors" style="background-color:green;" draggable="true" ondragstart="drag(event)" onclick="select(event)"></div>
+            <div id="gold" class="colors" style="background-color:gold;" draggable="true" ondragstart="drag(event)" onclick="select(event)"></div>
+
+            <div id="purple" class="colors" style="background-color:purple;" draggable="true" ondragstart="drag(event)" onclick="select(event)"></div>
+            <div id="orange" class="colors" style="background-color:orange;" draggable="true" ondragstart="drag(event)" onclick="select(event)"></div>
+            <div id="black" class="colors" style="background-color:black;" draggable="true" ondragstart="drag(event)" onclick="select(event)"></div>
+            <div id="white" class="colors" style="background-color:white;" draggable="true" ondragstart="drag(event)" onclick="select(event)"></div>
+        </div>
+
+        <div class="resizebar" id="rs2"></div>
+    </main>
+    <section>
+        <div id="emptyarea">
+            <div id="row1">
+                <div class="empty" id="empty1" ondrop="drop(event)" ondragover="allowDrop(event)" onclick="paste(event)"></div>
+                <div class="empty" id="empty2" ondrop="drop(event)" ondragover="allowDrop(event)" onclick="paste(event)"></div>
+                <div class="empty" id="empty3" ondrop="drop(event)" ondragover="allowDrop(event)" onclick="paste(event)"></div>
+                <div class="empty" id="empty4" ondrop="drop(event)" ondragover="allowDrop(event)" onclick="paste(event)"></div>
+            </div>
+        </div>
+
+        <p id="submitbutton" onclick="onSubmit()">Submit</p>
+    </section>
+    <script src="javascript/selected.js"></script>
+    <script src="javascript/dragable.js"></script>
+    <script src="javascript/resizable.js"></script>
+    <script src="javascript/submit.js"></script>
+</body>
+
+</html>
